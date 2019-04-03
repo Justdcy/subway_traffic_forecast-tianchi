@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar 28 15:50:40 2019
-
-@author: dell
-"""
-
-# -*- coding: utf-8 -*-
-"""
 Created on Fri Mar 22 15:38:01 2019
 
 @author: dell
@@ -39,27 +32,20 @@ sns.set(font_scale=1)
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LassoCV, RidgeCV
 
-
-
-
 path  = '/Users/dell/Desktop/tianchi_AI'
 test = pd.read_csv(path + '/Metro_testA/testA_submit_2019-01-29.csv')
 test_28 = pd.read_csv(path + '/Metro_testA/testA_record_2019-01-28.csv')
 station_con = pd.read_csv('Metro_roadMap.csv')
 
-#计算每个站口相连地铁站口个数,后面可选择用或不用，我们用了没提分。或许打开方式不对
+#计算每个站口相连地铁站口个数,后面可选择用或不用，我们用了没提分，或许打开方式不对
 del station_con['Unnamed: 0']
 station_con_sum=pd.DataFrame()
 station_con_sum['station_con_sum'] = np.sum(station_con,axis=0)
 station_con_sum = station_con_sum[0:]
 station_con_sum['stationID'] = np.arange(81)
 
-
 def mean_absolute_percentage_error(y_true, y_pred):
     return np.mean(np.abs(y_true - y_pred))
-
-
-
 
 def get_base_features(df_,test,time_str):
     
@@ -428,8 +414,6 @@ prediction['inNums'] = abs(np.round(prediction['inNums']))
 error_test_in = mean_absolute_percentage_error(abs(np.round(prediction['inNums'])),y_test)
 
 
-
-
 #############################################################outNums
 #############################################################
 data_out_shfit_temp = data_out_shfit.copy()
@@ -512,6 +496,7 @@ prediction['outNums'] = prediction_out
 
 prediction['outNums'] = abs(np.round(prediction['outNums']))
 error_test_out = mean_absolute_percentage_error(abs(np.round(prediction['outNums'])),y_test_out)
+
 
 
 print('最终inNums和outNums得分：',(np.mean(error_in)+np.mean(error_out))/2)
