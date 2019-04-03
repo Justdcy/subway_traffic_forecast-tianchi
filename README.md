@@ -7,5 +7,7 @@ A榜代码有部分是借鉴鱼佬开源代码，
 没能进入决赛也就不开源淘汰赛的代码了。
 数据集下载：
 链接: https://pan.baidu.com/s/1iLHomv5NRodB_3jr7FcFow 提取码: arse 
+比赛链接;https://tianchi.aliyun.com/competition/entrance/231708/introduction?spm=5176.12281957.1004.5.38b04c2alLBS7L
+
 
 
