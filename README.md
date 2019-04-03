@@ -1,2 +1,9 @@
 # subway_traffic_forecast-tianchi
 天池全球城市计算AI挑战赛-地铁人流量预测
+A榜22/2319，该代码是A榜代码，如果能有所收获，老铁右上角，star一下，感谢！
+感谢队友：taoberica、selina雪，感谢鱼佬baseline
+A榜代码有部分是借鉴鱼佬开源代码
+没能进入决赛也就不开源淘汰赛的代码了
+
+
+
